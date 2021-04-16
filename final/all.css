@@ -151,10 +151,12 @@ h2{
 
 .thstyle{
     background-color: #E6E6FA;
+    padding-bottom: 60px;
 }
 
 table{
     margin: 0 auto;
+  
 
 }
 table th{
@@ -169,6 +171,7 @@ tbody td{
     text-align: center;
     border-bottom: 1px solid 		#6666;
     color: #8888;
+    
 } 
 .icon{
     max-width: 600px;
