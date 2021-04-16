@@ -114,7 +114,7 @@
             <img  src="https://i.imgur.com/Z4WetKe.png" alt=""/>           
         </div>
     </div>
-    <div class="sel" style="width: 1000px; margin:auto;  justify-content: flex-start; padding: 20px;">
+    <div class="sel" style="max-width: 1000px; margin:auto;  justify-content: flex-start; padding: 20px;">
         <select class="selectCar" name="car" placeholder="請輸入" selected>
             <option value="全部">全部</option>
             <option value="床架">床架</option>
@@ -124,7 +124,51 @@
         </select>
     </div>
     <ul class="card">
-        </ul>>
+        </ul>
+    <div class="shoppingcart">
+        <h2 style=" padding-top: 50px; font-size: 30px;">我的購物車</h2>
+        <table  class="cartTable">
+            <thead>
+                <tr>
+                    <th>品項</th>
+                    <th >單價</th>
+                    <th >數量</th>
+                    <th >金額</th>
+                    </tr>
+            </thead>
+            <tbody class="cartsTbody">
+            </tbody>
+            <tbody>
+                <td><input type="button" value="刪除所有品項"  class="inputdelet"></td>
+                <td></td>
+                <td></td>
+                <td>總金額</td>
+                <td  class="cartTotal">NT$13,980</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2>填寫資料</h2>
+        <div class="fillinData">
+     
+            <div class="fillinConten">
+                <div>姓名</div>
+                <input placeholder="請輸入電話">
+                <div>電話</div>
+                <input placeholder="請輸入E-mail">
+                <div>E-mail</div>
+                <input placeholder="請輸入姓名">
+                <div>寄送地址</div>
+                <input placeholder="請輸入寄送地址">
+                <div>交易方式</div>
+                <input placeholder="ATM">
+            </div>
+        </div>
+      
+
+    <div class="fillindatapush">
+    <input  type="button" value="送出預訂資料"  class="fillinpush">
+    </div>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="app.js"></script>
 <script src="admin.js"></script>

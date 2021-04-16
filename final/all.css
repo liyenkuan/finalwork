@@ -92,7 +92,7 @@ a{
 }
 .navThree{
     padding: 15px;
-    width: 100%;
+    max-width: 100%;
     background-color: black;
 }
 .content{
@@ -148,13 +148,7 @@ h2{
     height: 150px;
 }
 
-@media (max-width: 767.98px) {
 
-    .imgList{
-        width: 500px;
-        flex-wrap: wrap;
-    }
-}
 .thstyle{
     background-color: #E6E6FA;
 }
@@ -177,23 +171,23 @@ tbody td{
     color: #8888;
 } 
 .icon{
-    width: 600px;
+    max-width: 600px;
     justify-content: space-around;
     margin:auto;
     display: flex;
 }
 .iconList{
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
     border:  3px solid #000;
     border-radius: 50%;
 }
 .iconList img{
     display:block;
-    width: 80px;
-    height: 60px;
+    max-width: 80px;
+    max-height: 60px;
     margin: 0 auto;
-   padding-top: 20px;
+   padding: 20px;
 }
 .arrow{
    padding-top: 40px;
@@ -219,7 +213,7 @@ tbody td{
     margin: 0 auto;
 } 
 .card li{
-    width: 20%;
+    max-width: 20%;
     background-color: #fff;
     /* border: 1px solid #DEE2E6; */
     margin-bottom: 38px;
@@ -272,4 +266,264 @@ tbody td{
     padding-top: 8px;
     font-size: 25px;
     font-family: sans-serif;
+}
+.shoppingcart{
+    max-width: 100%;
+    background-color: #DDDD;
+}
+.cartTable th{
+   text-align: start;
+   font-family: sans-serif;
+}
+.cartTable td{
+    color: #000;
+    font-weight: bold;
+    text-align: start;
+    font-family: sans-serif;
+    max-width: 280px;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+.cartTable td img{
+    max-width: 60px;
+    max-height: 60px;
+   padding-right: 10px;
+   text-align: start;
+   margin: 0 auto;
+}
+.inputdelet{
+    max-width: 600px;
+    font-size:15px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+.fillinData{
+    max-width: 100%;
+    display: flex;
+}
+.fillinConten{
+    width: 25%;
+    /* border: 1px solid #000; */
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.fillinConten div{
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.fillinConten input{
+    width: 98%;
+    height: 30px;
+    border-radius: 5px;
+    border:1px solid #4444;
+}
+.fillindatapush {
+    margin: 0 auto;
+    max-width: 15%;
+    padding: 30px;
+}
+.fillindatapush input{
+    width: 100%;
+}
+.fillinpush {
+    max-width: 600px;
+    font-size:20px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #000;
+    font-weight: bold;
+    color: #ffff;
+    background-color: #000;
+}
+
+@media (max-width: 375px) {
+    .navStyle{
+        background-color: white;
+        display: contents;
+        /* justify-content: space-between; */
+        padding: 30px;
+        margin: 0 auto;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: absolute;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+        z-index: 10;
+    }
+    .navOne{
+        width: 40%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+    .navTwo{
+        width: 100%;
+        display: flex;
+    }
+    .navStyle ul{
+        top:0px;
+        display: flex;
+        font-size: 18px;
+        font-weight: bold;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        list-style: none;
+    }
+    .navStyle ul li {
+        margin: 3px;
+    }
+    .imgList{
+        width: 50%;
+        flex-wrap: wrap;
+    }
+    .conImg {
+        position:relative;
+        z-index: 1;
+        max-width: 100%;
+        max-height: 200px;
+        margin:auto;
+    
+    }
+    .conImg img {
+        display:block;
+        max-width: 100%;
+        max-height: 200px;
+    }
+    .conText{
+        position:absolute;
+        left:0;
+        top:100px;
+        color: 	#fFF;
+        font-size: 30px;
+        padding: 20px;
+    }
+    h2{
+        padding: 30px;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+    }
+    .thstyle{
+        background-color: #E6E6FA;
+    }
+    .thstyle h2{
+        padding-top:20px ;
+        font-size: 30px;
+    }
+    table{
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    table th{
+        padding: 5px;
+        margin: 0 auto;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    tbody td{
+        font-size: 15px;
+        padding: 5px;
+        text-align: center;
+        border-bottom: 1px solid 		#6666;
+        color: #8888;
+    } 
+    .icon{
+        max-width: 600px;
+        justify-content: space-around;
+        margin:auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .iconList{
+        max-width: 150px;
+        max-height: 100px;
+        border:  3px solid #000;
+        border-radius: 50%;
+        margin: 20px;
+    }
+    .iconList img{
+        display:block;
+        width: 50px;
+        height: 30px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+    .arrow{
+       padding-top: 40px;
+       display: none;
+    }
+    .selectCar{
+        display: block;
+        margin: 0 auto;
+        border :none;
+        border:  1px solid #888;
+        height: 40px;
+        width: 200px;
+        border-radius: 10px;
+        text-align-last: center;
+    }
+    .card{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        max-width: 100%;
+        margin: 0 auto;
+    } 
+    .card li{
+        max-width: 40%;
+        background-color: #fff;
+        margin-bottom: 38px;
+        margin:0 auto;
+        list-style:none;
+    }
+    .fillinData{
+        max-width: 98%;
+        display: flex;
+        margin: 0 auto;
+    }
+    .fillinConten{
+        width: 100%;
+        /* border: 1px solid #000; */
+        margin: 0 auto;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .fillinConten div{
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+    .fillinConten input{
+        width: 98%;
+        height: 30px;
+        border-radius: 5px;
+        border:1px solid #4444;
+    }
+    .fillindatapush {
+        margin: 0 auto;
+        max-width: 50%;
+        padding: 30px;
+    }
+    .fillindatapush input{
+        width: 100%;
+    }
+    .fillinpush {
+        max-width: 600px;
+        font-size:20px;
+        border-radius: 5px;
+        padding: 10px;
+        border: 1px solid #000;
+        font-weight: bold;
+        color: #ffff;
+        background-color: #000;
+    }
 }
