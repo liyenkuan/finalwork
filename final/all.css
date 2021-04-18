@@ -343,6 +343,7 @@ tbody td{
     background-color: #000;
 }
 
+
 @media (max-width: 375px) {
     .navStyle{
         background-color: white;
