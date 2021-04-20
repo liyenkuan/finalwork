@@ -4,15 +4,18 @@ const selectDom = document.querySelector(".selectCar") ;
 const cartList = document.querySelector(".cartsTbody")
 const cartTotal = document.querySelector(".cartTotal")
 const cartDaelet = document.querySelector(".deletcartId")
+const deleteAll = document.querySelector(".inputdelet");
+const pushClient = document.querySelector(".fillinpush");
 // const cartDeletId = document.querySelector(".cartTable")
 
 let productsData = [];
 let cartsData =[];
+
 //https://hexschoollivejs.herokuapp.com/api/livejs/v1/customer/kko/products
 //https://hexschoollivejs.herokuapp.com/api/livejs/v1/customer/kko/carts
 //https://hexschoollivejs.herokuapp.com/api/livejs/v1/customer/kko/carts
 //https://hexschoollivejs.herokuapp.com/api/livejs/v1/customer/kko/carts
-
+//https://hexschoollivejs.herokuapp.com/api/livejs/v1/customer/kko/orders
 
 //初始化產品資料
 function init() {
@@ -58,6 +61,7 @@ function cardPut() {
     });
     productsList.innerHTML =  cardHtml;
 };
+//加入購物車
 productsList.addEventListener('click',function(e){
     let addCartClass = e.target.getAttribute("class");
     console.log(addCartClass);
@@ -69,7 +73,7 @@ productsList.addEventListener('click',function(e){
         addCartList(addCartId);
     }
   });
-//加入購物車
+
 function addCartList(addCartId){
     let numquantity = 1;
     cartsData.forEach(function(item){
@@ -93,7 +97,6 @@ function addCartList(addCartId){
       });
 
 };
-
 //刪除購物車
 cartList.addEventListener('click',function(e){
     let deletCartClass = e.target.getAttribute("class");
@@ -112,16 +115,29 @@ function deletCartFn(deletCartId){
         initcart();
       })
 };
+deleteAll.addEventListener("click",function(e) {
+    console.log(cartTotal.textContent);
+    if(cartTotal.textContent == "NT$0"){
+        console.log("沒惹<3");
+        return;
+    }else{
+        axios.delete(`https://hexschoollivejs.herokuapp.com/api/livejs/v1/customer/kko/carts`).then(function (response) {
+            console.log(response);
+            initcart();
+            });
+    }
+});
 
 //-----------------購物車-------------------------
 function cartput() {
     let cartHtml = '';
     let carttotalprice  = 0;
     cartsData.forEach(function (item ) {
-        let cartData = `<tr><td>
-        <img src="${item.product.images}">
+        let cartData = `<tr><td >
+        <img src="${item.product.images}"></td>
+        <td style="max-width : 150px;text-align: start;">
         ${item.product.title}</td>
-        <td>${item.product.title}</td> 
+        <td>${item.product.origin_price}</td> 
         <td>${item.quantity}</td> 
         <td>NT$${item.product.price}</td>
         <td ><a href="#" class = "deletcartId" data-id ="${item.id}" ><img  class = "deletcartId" data-id =${item.id}  style="width: 30px; height: 30px;" src="https://i.imgur.com/FvkjACF.png"></a></td>  
@@ -160,6 +176,38 @@ selectDom.addEventListener("change",function (e) {
        productsList.innerHTML =  cardHtml;
     };
 });
-
+//----------送出客戶資料-----------
+pushClient.addEventListener("click",function (e) {
+    console.log("送辣");
+    let Cname = document.querySelector(".ContenName").value;
+    let Cnumber =  document.querySelector(".ContenNumber").value;
+    let Cmail =  document.querySelector(".ContenMail").value;
+    let Caddress =  document.querySelector(".ContenAddress").value;
+    let Cpay =  document.querySelector(".ContenPay").value;
+    if (Cname ==''){
+        alert("請輸入姓名");
+    }else{
+        axios.post(`https://hexschoollivejs.herokuapp.com/api/livejs/v1/customer/kko/orders`, 
+        {
+            data :{
+                user:{
+                            "name":  Cname,
+                            "tel": Cnumber,
+                            "email": Cmail,
+                            "address": Caddress,
+                            "payment": Cpay
+                }
+            }
+          })
+          .then(function (response) {
+              console.log(response);
+            // window.location.reload();
+          })
+          .catch(function (error) {
+            console.log(error);
+            alert("請確認購物車是否有紀錄");
+          });
+    }
+});
 init();
 initcart();

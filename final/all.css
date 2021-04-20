@@ -293,7 +293,7 @@ tbody td{
     max-height: 60px;
    padding-right: 10px;
    text-align: start;
-   margin: 0 auto;
+
 }
 .inputdelet{
     max-width: 600px;
@@ -301,6 +301,11 @@ tbody td{
     border-radius: 5px;
     padding: 10px;
     border: 1px solid #000;
+    cursor: pointer; 
+}
+.inputdelet:hover{
+    background-color: #000;
+    color: #fff;
 }
 .fillinData{
     max-width: 100%;
@@ -529,5 +534,6 @@ tbody td{
         font-weight: bold;
         color: #ffff;
         background-color: #000;
+        
     }
 }

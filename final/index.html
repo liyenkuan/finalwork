@@ -131,22 +131,24 @@
             <thead>
                 <tr>
                     <th>品項</th>
+                    <th></th>
                     <th >單價</th>
                     <th >數量</th>
                     <th >金額</th>
                     </tr>
             </thead>
-            <tbody class="cartsTbody">
+            <tbody class="cartsTbody" >
             </tbody>
             <tbody>
                 
-                <td><input type="button" value="刪除所有品項"  class="inputdelet"></td>
+                <td><input type="button"  value="刪除所有品項"  class="inputdelet"></td>
                 <td></td>
                 <td></td>
                 <td>總金額</td>
                 <td  class="cartTotal">NT$13,980</td>
             </tr>
             </tbody>
+           
         </table>
     </div>
     <h2>填寫資料</h2>
@@ -154,21 +156,21 @@
      
             <div class="fillinConten">
                 <div>姓名</div>
-                <input placeholder="請輸入電話">
+                <input placeholder="請輸入電話" class="ContenName">
                 <div>電話</div>
-                <input placeholder="請輸入E-mail">
+                <input type="number" placeholder="請輸入電話"  class="ContenNumber">
                 <div>E-mail</div>
-                <input placeholder="請輸入姓名">
+                <input placeholder="請輸入E-mail" class="ContenMail">
                 <div>寄送地址</div>
-                <input placeholder="請輸入寄送地址">
+                <input placeholder="請輸入寄送地址" class="ContenAddress">
                 <div>交易方式</div>
-                <input placeholder="ATM">
+                <input  placeholder="ATM"  class="ContenPay">
             </div>
         </div>
       
 
     <div class="fillindatapush">
-    <input  type="button" value="送出預訂資料"  class="fillinpush">
+    <input  type="button" value="送出預訂資料"  class="fillinpush" >
     </div>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="app.js"></script>
