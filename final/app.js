@@ -6,11 +6,8 @@ const cartTotal = document.querySelector(".cartTotal")
 const cartDaelet = document.querySelector(".deletcartId")
 const deleteAll = document.querySelector(".inputdelet");
 const pushClient = document.querySelector(".fillinpush");
-// const cartDeletId = document.querySelector(".cartTable")
-
 let productsData = [];
 let cartsData =[];
-
 //https://hexschoollivejs.herokuapp.com/api/livejs/v1/customer/kko/products
 //https://hexschoollivejs.herokuapp.com/api/livejs/v1/customer/kko/carts
 //https://hexschoollivejs.herokuapp.com/api/livejs/v1/customer/kko/carts
