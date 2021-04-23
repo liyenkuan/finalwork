@@ -278,6 +278,10 @@ table{
 .cartTable th{
    text-align: start;
    font-family: sans-serif;
+   padding: 30px;
+   margin: 0 auto;
+   font-size: 20px;
+   font-weight: bold;
 }
 .cartTable td{
     color: #000;
@@ -293,6 +297,7 @@ table{
     text-align: center;
     border-bottom: 1px solid 		#6666;
     padding: 10px;
+    vertical-align: middle;
 }
 .cartTable td img{
     max-width: 60px;

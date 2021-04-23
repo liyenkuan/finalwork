@@ -49,7 +49,7 @@ function cardPut() {
                                     <img  src="${item.images}" alt=""/>  
                                 <div class="CardNew">新品</div>
                             </div>
-                            <div class="cardText"> <a href="#" class ="addCar" data-id = "${item.id}">加入購物車</a></div>
+                            <div class="cardText"> <a href="javascript:" class ="addCar" data-id = "${item.id}">加入購物車</a></div>
                             <div class="Pname">${item.title}</div>
                             <div class="Pname" style="text-decoration:line-through;">${item.origin_price}</div>
                             <div class="price">${item.price}</div>
@@ -137,7 +137,7 @@ function cartput() {
         <td>${item.product.origin_price}</td> 
         <td>${item.quantity}</td> 
         <td>NT$${item.product.price}</td>
-        <td ><a href="#" class = "deletcartId" data-id ="${item.id}" ><img  class = "deletcartId" data-id =${item.id}  style="width: 30px; height: 30px;" src="https://i.imgur.com/FvkjACF.png"></a></td>  
+        <td ><a href="###" class = "deletcartId" data-id ="${item.id}" ><img  class = "deletcartId" data-id =${item.id}  style="width: 30px; height: 30px;" src="https://i.imgur.com/FvkjACF.png"></a></td>  
     </tr>`;
         cartHtml += cartData;
         carttotalprice += item.product.price*item.quantity;
@@ -163,7 +163,7 @@ selectDom.addEventListener("change",function (e) {
                                 <img  src="${item.images}" alt=""/>  
                             <div class="CardNew">新品</div>
                         </div>
-                        <div class="cardText"> <a   class ="addCar" data-id = ${item.id}>加入購物車</a></div>
+                        <div class="cardText"> <a  href="javascript:" class ="addCar" data-id = ${item.id}>加入購物車</a></div>
                         <div class="Pname">${item.title}</div>
                         <div class="Pname" style="text-decoration:line-through;">${item.origin_price}</div>
                         <div class="price">${item.price}</div>
