@@ -206,5 +206,24 @@ pushClient.addEventListener("click",function (e) {
           });
     }
 });
+//--------------------打開MENU--------------------
+const menuBtn = document.querySelector(".navIcon");
+const menuA = document.querySelectorAll(".navStyle ul li a");
+const menu = document.querySelector(".menu ");
+console.log(menuBtn);
+console.log(menuA);
+menuBtn.addEventListener("click",function () {
+    if(menu.classList.contains("openMenu")){
+        menu.classList.remove("openMenu");
+    }else{
+        menu.classList.add("openMenu"); 
+    };
+});
+menuA.forEach((item) =>{
+    item.addEventListener("click", closemenu);
+});
+function closemenu() {
+    menu.classList.remove("openMenu");
+}
 init();
 initcart();
