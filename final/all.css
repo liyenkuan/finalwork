@@ -365,7 +365,7 @@ table{
 }
 
 
-@media (max-width: 375px) {
+@media (max-width: 1100px) {
     .navStyle{
         background-color: white;
         display: contents;
@@ -532,7 +532,7 @@ table{
     cursor: pointer;
 
 }
-@media (max-width: 375px) {
+@media (max-width: 1100px) {
     .navStyle .navIcon{
         display: block;
         cursor: pointer;
